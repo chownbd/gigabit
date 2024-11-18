@@ -261,8 +261,8 @@ wget https://www.dropbox.com/s/kvmbhteapg4aj3w/percona56.tar.gz --no-check-certi
 fi
 tar -xzvf percona56.tar.gz
 cd /root/percona
-wget https://ubuntu.uhost.hk/debian/pool/main/r/readline6/libreadline6_6.3-8+b3_amd64.deb
-wget https://debian.sipwise.com/debian-security/pool/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u8_amd64.deb
+wget https://ubuntu.uhost.hk/debian/pool/main/r/readline6/libreadline6_6.3-8+b3_amd64.deb --no-check-certificate
+wget https://debian.sipwise.com/debian-security/pool/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u8_amd64.deb --no-check-certificate
 dpkg -i libssl1.0.0_1.0.1t-1+deb8u8_amd64.deb
 dpkg -i libreadline6_6.3-8+b3_amd64.deb
 dpkg -i percona-server-common-5.6_5.6.36-82.0-1.jessie_amd64.deb
@@ -280,7 +280,7 @@ if [ $? -ne 0 ]; then
 fi
 ps_tokudb_admin --enable -uroot -praptor
 #wget www.raptor.alterserv.com/var/raptor_d8.sql
-wget https://github.com/hendralin/raptorcache-2.0.6/blob/main/raptor_d8.sql
+wget https://github.com/hendralin/raptorcache-2.0.6/blob/main/raptor_d8.sql --no-check-certificate
 mv raptor_d8.sql /var/tmp/
 mysql -uroot -praptor << eof
 CREATE DATABASE raptor;
