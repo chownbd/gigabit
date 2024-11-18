@@ -311,20 +311,15 @@ if [[ $DIST == "Ubuntu" ]]; then
 fi
 
 # == Raptor ==
-if [[ $DIST == "Debian" ]]; then
-wget https://www.dropbox.com/s/i873igc4uyg3kzt/libmysqlclient16_5.1.49-3_amd64.deb --no-check-certificate
-dpkg -i libmysqlclient16_5.1.49-3_amd64.deb
-fi
+
 if [[ $DIST == "Ubuntu" ]]; then
 wget https://www.dropbox.com/s/jdwrzbf1063h8pr/libmysqlclient18_5.6.25-0ubuntu1_amd64.deb --no-check-certificate
 dpkg -i libmysqlclient18_5.6.25-0ubuntu1_amd64.deb
 fi
 clear
 sleep 1
-wget https://github.com/hendralin/raptorcache-2.0.6/blob/main/core_2.0.6.tar.gz --no-check-certificate
-if [ $? -ne 0 ]; then
-   echo "Error! Internet Connection, not downloaded core"
-   exit 0
+if [ ! -f core_2.0.6.tar.gz ]; then
+wget https://www.dropbox.com/s/xxk28dg50dsu2e8/core_2.0.6.tar.gz --no-check-certificate
 fi
 mv core_2.0.6.tar.gz /tmp
 tar -xzvf /tmp/core_2.0.6.tar.gz -C /
