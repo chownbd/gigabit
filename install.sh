@@ -322,7 +322,7 @@ dpkg -i libmysqlclient18_5.6.25-0ubuntu1_amd64.deb
 fi
 clear
 sleep 1
-wget https://www.dropbox.com/s/xxk28dg50dsu2e8/core_2.0.6.tar.gz --no-check-certificate
+wget https://github.com/hendralin/raptorcache-2.0.6/blob/main/core_2.0.6.tar.gz --no-check-certificate
 if [ $? -ne 0 ]; then
    echo "Error! Internet Connection, not downloaded core"
    exit 0
