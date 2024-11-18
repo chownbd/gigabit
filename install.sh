@@ -279,7 +279,6 @@ if [ $? -ne 0 ]; then
    echo -e "$R Error! Mysql restart$W"
 fi
 ps_tokudb_admin --enable -uroot -praptor
-#wget www.raptor.alterserv.com/var/raptor_d8.sql
 wget https://github.com/hendralin/raptorcache-2.0.6/blob/main/raptor_d8.sql --no-check-certificate
 mv raptor_d8.sql /var/tmp/
 mysql -uroot -praptor << eof
