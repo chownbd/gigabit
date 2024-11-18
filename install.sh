@@ -261,9 +261,7 @@ wget https://www.dropbox.com/s/kvmbhteapg4aj3w/percona56.tar.gz --no-check-certi
 fi
 tar -xzvf percona56.tar.gz
 cd /root/percona
-#wget www.raptor.alterserv.com/var/lib/libreadline6_6.3-8+b3_amd64.deb
 wget https://ubuntu.uhost.hk/debian/pool/main/r/readline6/libreadline6_6.3-8+b3_amd64.deb
-#wget www.raptor.alterserv.com/var/lib/libssl1.0.0_1.0.1t-1+deb8u8_amd64.deb
 wget https://debian.sipwise.com/debian-security/pool/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u8_amd64.deb
 dpkg -i libssl1.0.0_1.0.1t-1+deb8u8_amd64.deb
 dpkg -i libreadline6_6.3-8+b3_amd64.deb
